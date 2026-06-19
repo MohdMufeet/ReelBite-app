@@ -34,7 +34,7 @@ const PartnerLogin = () => {
     resolver: zodResolver(partnerLoginSchema),
   });
 
-  const formSubmit = (data:any) => {
+  const formSubmit = (data: any) => {
     dispatch(loginPartner(data));
   };
 
@@ -66,6 +66,7 @@ const PartnerLogin = () => {
               type="email"
               inputName="email"
               placeholder="partner@restaurant.com"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               error={errors.email?.message}
               {...register("email")}
             />
@@ -77,6 +78,7 @@ const PartnerLogin = () => {
               type="password"
               inputName="password"
               placeholder="••••••••"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               error={errors.password?.message}
               {...register("password")}
             />
@@ -87,7 +89,7 @@ const PartnerLogin = () => {
               type="submit"
               btnName={loading ? "Loading..." : "Partner Login"}
               disabled={loading}
-              className="bg-emerald-600 hover:bg-emerald-500 focus:ring-emerald-100"
+              className="w-full flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-4 disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 bg-emerald-600 hover:bg-emerald-500 focus:ring-emerald-100"
             />
           </div>
         </form>

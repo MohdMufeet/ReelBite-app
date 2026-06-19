@@ -32,7 +32,7 @@ const Signup = () => {
     resolver: zodResolver(registerSchema),
   });
 
-  const formSubmit = (data:any) => {
+  const formSubmit = (data: any) => {
     dispatch(registerUser(data));
   };
 
@@ -60,6 +60,7 @@ const Signup = () => {
               labelName="Full Name"
               type="text"
               inputName="name"
+              focusClassName="focus:border-indigo-500 focus:ring-indigo-100"
               placeholder="John Doe"
               error={errors.name?.message}
               {...register("name")}
@@ -71,6 +72,7 @@ const Signup = () => {
               labelName="Email Address"
               type="email"
               inputName="email"
+              focusClassName="focus:border-indigo-500 focus:ring-indigo-100"
               placeholder="name@example.com"
               error={errors.email?.message}
               {...register("email")}
@@ -82,6 +84,7 @@ const Signup = () => {
               labelName="Password"
               type="password"
               inputName="password"
+              focusClassName="focus:border-indigo-500 focus:ring-indigo-100"
               placeholder="••••••••"
               error={errors.password?.message}
               {...register("password")}
@@ -93,7 +96,7 @@ const Signup = () => {
               type="submit"
               btnName={loading ? "Creating account..." : "Create Account"}
               disabled={loading}
-              className="w-full justify-center"
+              className="w-full flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white active:scale-[0.98] transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-4 disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100 bg-indigo-600 hover:bg-indigo-500 focus:ring-indigo-100"
             />
           </div>
         </form>

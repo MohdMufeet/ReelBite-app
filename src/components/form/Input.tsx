@@ -3,6 +3,7 @@ type InputProps = {
   type: string;
   placeholder: string;
   inputName: string;
+  focusClassName: string;
   error: string | null | undefined;
 } & React.InputHTMLAttributes<HTMLInputElement>;
 
@@ -12,6 +13,7 @@ const Input = ({
   placeholder,
   inputName,
   error,
+  focusClassName,
   ...props
 }: InputProps) => {
   return (
@@ -32,9 +34,9 @@ const Input = ({
           ${
             error
               ? "border-red-400 focus:border-red-500 focus:ring-4 focus:ring-red-100"
-              : "border-slate-200 hover:border-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
-          }
-        `}
+              : `border-slate-200 hover:border-slate-300 focus:ring-4 ${focusClassName}`
+          } 
+           `}
         {...props}
       />
 

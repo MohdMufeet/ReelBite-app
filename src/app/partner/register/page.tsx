@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { partnerRegisterSchema } from "../../../schemas/schema";
 import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
 import Link from "next/link";
-import {useRouter} from 'next/navigation';
+import { useRouter } from "next/navigation";
 import { registerPartner } from "../../../features/auth/partner/partnerAuthThunk";
 import Wrapper from "../../../components/Wrapper";
 import { useEffect } from "react";
@@ -41,7 +41,7 @@ const PartnerSignup = () => {
       email: "",
       password: "",
       description: "",
-    }
+    },
   });
 
   const formSubmit = (data: any) => {
@@ -75,6 +75,7 @@ const PartnerSignup = () => {
               labelName="Business/Shop Name"
               type="text"
               inputName="name"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="Enter company or shop name"
               error={errors.name?.message}
               {...register("name")}
@@ -86,6 +87,7 @@ const PartnerSignup = () => {
               labelName="Username"
               type="text"
               inputName="username"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="e.g., the_gourmet_reel"
               error={errors.username?.message}
               {...register("username")}
@@ -97,6 +99,7 @@ const PartnerSignup = () => {
               labelName="Contact Person Name"
               type="text"
               inputName="contactName"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="Enter contact person's name"
               error={errors.contactName?.message}
               {...register("contactName")}
@@ -108,6 +111,7 @@ const PartnerSignup = () => {
               labelName="Phone Number"
               type="tel"
               inputName="phone"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="Enter phone number"
               error={errors.phone?.message}
               {...register("phone")}
@@ -119,6 +123,7 @@ const PartnerSignup = () => {
               labelName="Business Address"
               type="text"
               inputName="address"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="Enter full address"
               error={errors.address?.message}
               {...register("address")}
@@ -130,6 +135,7 @@ const PartnerSignup = () => {
               labelName="Email Address"
               type="email"
               inputName="email"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="Enter email address"
               error={errors.email?.message}
               {...register("email")}
@@ -141,6 +147,7 @@ const PartnerSignup = () => {
               labelName="Password"
               type="password"
               inputName="password"
+              focusClassName="focus:border-emerald-500 focus:ring-emerald-100"
               placeholder="••••••••"
               error={errors.password?.message}
               {...register("password")}
@@ -148,12 +155,14 @@ const PartnerSignup = () => {
           </div>
 
           <div className="space-y-1">
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+            <label className="text-sm font-semibold text-slate-700 capitalize tracking-wide">
               Kitchen Description
             </label>
             <textarea
-              className={`block w-full rounded-xl border p-3 text-sm text-slate-800 bg-white placeholder-slate-400 outline-none transition focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/20 ${
-                errors.description?.message ? "border-red-500" : "border-slate-200"
+              className={`block w-full rounded-xl border p-3 text-sm text-slate-800 bg-white placeholder-slate-400 outline-none transition focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 ${
+                errors.description?.message
+                  ? "border-red-500"
+                  : "border-slate-200"
               }`}
               id="description"
               rows={3}
