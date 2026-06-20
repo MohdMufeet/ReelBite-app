@@ -21,7 +21,7 @@ const router = useRouter();
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 sm:space-y-8 bg-slate-50/60 min-h-screen">
+    <div className="w-full max-w-7xl mx-auto space-y-6 sm:space-y-8 bg-slate-50/60 min-h-screen">
      
 
       {/* RESTAURANT CORE METRICS GRID */}
@@ -157,7 +157,7 @@ const router = useRouter();
             </p>
             <div className="pt-2">
               <Link
-                href="/partner/create"
+                href="/partner/dashboard/create"
                 className="inline-flex items-center text-xs font-bold text-white hover:text-orange-400 transition-colors underline underline-offset-4"
               >
                 Upload Food Video Now
