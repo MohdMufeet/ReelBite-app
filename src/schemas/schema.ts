@@ -62,6 +62,7 @@ const reelSchema = z.object({
   description: z.string().min(12).max(1000),
   price: z.string().optional(),
   file: z.any().optional(),
+  likes:z.number()
 });
 
 

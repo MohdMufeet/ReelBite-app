@@ -23,7 +23,7 @@ const Sidebar = () => {
   return (
      <aside className="w-64 bg-slate-900 text-white flex flex-col justify-between hidden md:flex">
             <div className="p-5">
-              <h2 className="text-2xl font-bold tracking-wider text-indigo-400">Partner Panel</h2>
+              <h2 className="text-2xl font-bold tracking-wider text-emerald-400">Partner Panel</h2>
               
               <nav className="mt-8 space-y-2">
                 <Link href="/partner/dashboard" className="block px-4 py-2.5 rounded transition bg-slate-800 text-white">
@@ -35,7 +35,7 @@ const Sidebar = () => {
                 <Link href="/partner/dashboard/profile" className="block px-4 py-2.5 rounded transition text-gray-400 hover:bg-slate-800 hover:text-white">
                   Profile
                 </Link>
-                <Link href="/partner/dashboard/profile" className="block px-4 py-2.5 rounded transition text-gray-400 hover:bg-slate-800 hover:text-white">
+                <Link href="/partner/dashboard/partner-foods" className="block px-4 py-2.5 rounded transition text-gray-400 hover:bg-slate-800 hover:text-white">
                   Your Foods
                 </Link>
                 <Link href="/partner/dashboard/create" className="block px-4 py-2.5 rounded transition text-gray-400 hover:bg-slate-800 hover:text-white">

@@ -20,7 +20,7 @@ const Signup = () => {
   );
   useEffect(() => {
     if (isAuthenticated) {
-      router.replace("/user");
+      router.replace("/user/profile");
     }
   }, [isAuthenticated, router]);
 
