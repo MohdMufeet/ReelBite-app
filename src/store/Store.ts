@@ -3,6 +3,7 @@ import authReducer from "../features/auth/user/userAuthSlice";
 import partnerAuthReducer from "../features/auth/partner/partnerAuthSlice";
 import orderReducer from "../features/order/orderSlice";
 import reelReducer from "../features/reels/reelSlice";
+import saveReducer from "@/features/save/saveSlice";
 
 
 export const store = configureStore({
@@ -11,6 +12,8 @@ export const store = configureStore({
     partner: partnerAuthReducer,
     reel: reelReducer,
     order: orderReducer,
+    save: saveReducer
+    
   },
 });
 
