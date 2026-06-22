@@ -4,15 +4,21 @@ import partnerAuthReducer from "../features/auth/partner/partnerAuthSlice";
 import orderReducer from "../features/order/orderSlice";
 import reelReducer from "../features/reels/reelSlice";
 import saveReducer from "@/features/save/saveSlice";
+import likeReducer from "../features/like/likeSlice";
+// import partnerReducer from "../features/partnerProfile/partnerSlice";
+// import cartReducer from "../features/cart/cartSlice";
 
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
-    partner: partnerAuthReducer,
-    reel: reelReducer,
-    order: orderReducer,
-    save: saveReducer
+    auth:authReducer,
+        partner:partnerAuthReducer,
+        reel:reelReducer,
+        like:likeReducer,
+        save:saveReducer,
+        // partnerProfile:partnerReducer,
+        // cart:cartReducer,
+        order:orderReducer
     
   },
 });
