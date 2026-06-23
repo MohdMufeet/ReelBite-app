@@ -5,8 +5,8 @@ import orderReducer from "../features/order/orderSlice";
 import reelReducer from "../features/reels/reelSlice";
 import saveReducer from "@/features/save/saveSlice";
 import likeReducer from "../features/like/likeSlice";
-import partnerReducer from "../features/partnerProfile/partnerSlice";
-import cartReducer from "../features/cart/cartSlice";
+import partnerReducer from "@/features/partnerProfile/partnerSlice";
+import cartReducer from "@/features/cart/cartSlice";
 
 
 export const store = configureStore({
